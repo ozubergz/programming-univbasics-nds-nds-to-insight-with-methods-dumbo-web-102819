@@ -9,12 +9,12 @@ def directors_totals(nds)
   result = {}
   row_index = 0
   while row_index < nds.length do
-    director_name = nds[row_index][:name]
-    director_movies = nds[row_index][:movies]
-    
-    grand_total = gross_for_director(director_movies)
+    name = nds[row_index][:name]
+    director_hash = nds[row_index]
 
-    result[director_name] = grand_total
+    grand_total = gross_for_director(director_hash)
+    
+    result[name] = grand_total
 
     row_index += 1
   end
