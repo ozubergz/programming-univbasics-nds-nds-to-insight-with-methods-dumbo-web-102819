@@ -26,13 +26,13 @@ end
 # using director_data as input
 
 def gross_for_director(director_data)
-  row_index = 0
-  collect_total = 0
-  
-  while row_index < director_data.length do
-    collect_total += director_data[row_index][:worldwide_gross]
-    row_index += 1
+  index = 0
+  total = 0
+
+  while index < director_data[:movies].length do
+    total += director_data[:movies][index][:worldwide_gross]
+    index += 1
   end
   
-  collect_total
+  total
 end
